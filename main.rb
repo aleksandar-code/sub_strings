@@ -6,41 +6,50 @@ require 'pry-byebug'
 # Both are sent to the method as arguments
 binding.pry
 
-
-dictionary = ["to", "be", "or", "not", "below"]
 # What happpens in the method? #
 # Iterate through word_array with an each loop
 
-def sub_strings(word_array, dictionary)
+dictionary = ["I", "of", "and", "a", "to", "in", "is", "you", "that", "it", "he", "was", "for", "on", "are", "as", "with", "his", "they"]
+
+
+def sub_strings(words_array, dictionary)
     binding.pry
     found_var_array = []
     stack_letters = ""
-    word_array.each do |letter|
-        
-        
-        stack_letters += letter
-        binding.pry
-        
-        if dictionary.include?(stack_letters)
-            found_var_array << stack_letters
-        end
-
-    end
-    binding.pry
+    the_hash = {}
     
-    the_hash = found_var_array.reduce(Hash.new(0)) do |result, occurrence|
-        result[occurrence] +=1
-        result
+
+    words_array.each do |word|
+
+        word = word.split("")
+
+        stack_letters = ""
+
+            word.each do |letter|
+            
+                stack_letters += letter
+                binding.pry
+                
+                if dictionary.include?(stack_letters)
+                    found_var_array << stack_letters
+                end
+                
+            end
+        
+      
     end
-    binding.pry
-    print "#{the_hash}\n"
+
+  
+    
+    print "#{found_var_array}\n\n"
+    
 end
-binding.pry
 
-word = gets.chomp
-word_array = word.split("")
 
-sub_strings(word_array, dictionary)
+words = gets.chomp
+words_array = words.split(" ")
+
+sub_strings(words_array, dictionary)
 
 
 
@@ -54,3 +63,11 @@ sub_strings(word_array, dictionary)
 # Then found_var_array.reduce(Hash.new(0))
 # Print the result
 
+
+
+ 
+# the_hash = found_var_array.reduce do |result, occurrence|
+#     result[occurrence] +=1
+#     result
+    
+# end
