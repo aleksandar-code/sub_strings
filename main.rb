@@ -16,9 +16,7 @@ def sub_strings(words_array, dictionary)
             word.each do |letter|
                 letter = letter.downcase
                 stack_letters += letter
-                
-                
-
+             
                 dictionary.each do |word_inside|
                     if dictionary.include?(stack_letters)
                         
