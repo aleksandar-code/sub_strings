@@ -3,9 +3,14 @@
 # Create variables; word, dictionary. #
 # The word is split in an array of chars
 # Both are sent to the method as arguments
-
+word = "not"
+dictionary = ["to", "be", "or", "not"]
+word_array = word.split("")
 # What happpens in the method? #
 # Iterate through word_array with an each loop
+def sub_strings(word_array, dictionary)
+    word_array.each do |letter|
+        
 
 # What happens in the each loop? #
 # Create variables; stack_letters, found_var_array
