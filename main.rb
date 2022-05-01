@@ -1,7 +1,6 @@
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 def sub_strings(words_array, dictionary)
-
     found_var_array = []
     words_array.each do |word|
 
@@ -9,6 +8,7 @@ def sub_strings(words_array, dictionary)
         dictionary.each do |word_inside|
 
             if dictionary.include?(word) || word.include?(word_inside)
+
                 if word.include?(word_inside) 
                    found_var_array << word_inside
                 end
@@ -20,7 +20,7 @@ def sub_strings(words_array, dictionary)
         result[occurrence] += 1
         result 
     end
-    
+
     print "the hash#{the_hash}\n\n"
 end
 
