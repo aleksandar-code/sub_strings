@@ -8,27 +8,21 @@ def sub_strings(words_array, dictionary)
     
 
     words_array.each do |word|
-
-        word = word.split("")
-
-        stack_letters = ""
         
-            word.each do |letter|
-                letter = letter.downcase
-                stack_letters += letter
-             
+        word = word.downcase
+        
                 dictionary.each do |word_inside|
-                    if dictionary.include?(stack_letters)
+                    if dictionary.include?(word) || word.include?(word_inside)
                         
-                        if stack_letters.include?(word_inside) 
-                            found_var_array << word_inside
+                        if word.include?(word_inside) 
+                           found_var_array << word_inside
                             
                         end
                         
                     end
                     
                 end
-            end
+            
     end
     
     
