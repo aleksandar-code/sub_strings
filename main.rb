@@ -4,12 +4,23 @@
 # The word is split in an array of chars
 # Both are sent to the method as arguments
 word = "not"
-dictionary = ["to", "be", "or", "not"]
+dictionary = ["to", "be", "or", "not", "below"]
 word_array = word.split("")
 # What happpens in the method? #
 # Iterate through word_array with an each loop
+
 def sub_strings(word_array, dictionary)
+    found_var_array = []
     word_array.each do |letter|
+        stack_letters = []
+        stack_letters << letter
+
+        if dictionary.include?(stack_letters)
+            found_var_array = stack_letters
+        end
+        
+    end
+end
         
 
 # What happens in the each loop? #
