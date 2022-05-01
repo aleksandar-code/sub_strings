@@ -5,9 +5,9 @@ require 'pry-byebug'
 # The word is split in an array of chars
 # Both are sent to the method as arguments
 binding.pry
-word = "not"
+
+
 dictionary = ["to", "be", "or", "not", "below"]
-word_array = word.split("")
 # What happpens in the method? #
 # Iterate through word_array with an each loop
 
@@ -33,10 +33,17 @@ def sub_strings(word_array, dictionary)
         result
     end
     binding.pry
-    print the_hash
+    print "#{the_hash}\n"
 end
 binding.pry
+
+word = gets.chomp
+word_array = word.split("")
+
 sub_strings(word_array, dictionary)
+
+
+
 # What happens in the each loop? #
 # Create variables; stack_letters, found_var_array
 
