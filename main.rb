@@ -18,8 +18,15 @@ def sub_strings(word_array, dictionary)
         if dictionary.include?(stack_letters)
             found_var_array = stack_letters
         end
-        
+
     end
+
+    the_hash = found_var_array.reduce(Hash.new(0)) do |result, occurrence|
+        result[occurrence] +=1
+        result
+    end
+
+    print the_hash
 end
         
 
