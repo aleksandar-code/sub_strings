@@ -1,4 +1,5 @@
-# sub-strings
-Projet: https://www.theodinproject.com/lessons/ruby-sub-strings
+# Sub strings
 
-Live: https://replit.com/@Shiisui/sub-strings?v=1
+Assignment for the Ruby course of <a href="https://www.theodinproject.com/">The Odin Project</a>.
+
+Assignment: https://www.theodinproject.com/lessons/ruby-sub-strings.
